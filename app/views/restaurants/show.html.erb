@@ -18,6 +18,10 @@
   <%= @restaurant.category %>
 </p>
 
+<h3>New review</h3>
+<%= render 'reviews/form', restaurant: @restaurant, review: @review %>
+
+
 <h3>Reviews</h3>
 <ul>
   <% @restaurant.reviews.each do |review| %>
@@ -25,5 +29,5 @@
   <% end %>
 </ul>
 
-<%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %>
+
 <%= link_to 'Go back', restaurants_path %>
